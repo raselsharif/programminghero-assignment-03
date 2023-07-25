@@ -5,7 +5,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fruits Burst</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -29,33 +30,67 @@
 
     <!-- ========== header section ===== -->
     <header class="container mx-auto">
-        <nav class="flex justify-between items-center  bg-colorPrimary py-9 px-12 my-12 rounded-full">
-            <ul class="flex gap-4">
-                <li><a class="font-normal text-lg text-white capitalize hover:opacity-80 transition" href="#">home</a>
-                </li>
-                <li><a class="font-normal text-lg text-white capitalize hover:opacity-80 transition" href="#">about
-                        us</a></li>
-                <li><a class="font-normal text-lg text-white capitalize hover:opacity-80 transition" href="#">shop</a>
-                </li>
-                <li><a class="font-normal text-lg text-white capitalize hover:opacity-80 transition" href="#">all
-                        fruits</a></li>
-            </ul>
-            <div class="flex items-center">
-                <img src="images/logo.png" alt="">
-                <h3 class="text-white text-4xl font-bold capitalize ml-3">fruits burst</h3>
+        <div class="bg-colorPrimary flex justify-between items-center py-4 lg:py-8 px-6 my-0 lg:my-12 rounded-none lg:rounded-full">
+            <div class="hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <ul class="flex gap-4">
+                        <li><a class="font-normal text-lg text-white capitalize hover:opacity-80 transition"
+                                href="#">home</a>
+                        </li>
+                        <li><a class="font-normal text-lg text-white capitalize hover:opacity-80 transition"
+                                href="#">about
+                                us</a></li>
+                        <li><a class="font-normal text-lg text-white capitalize hover:opacity-80 transition"
+                                href="#">shop</a>
+                        </li>
+                        <li><a class="font-normal text-lg text-white capitalize hover:opacity-80 transition"
+                                href="#">all
+                                fruits</a></li>
+                    </ul>
+                </ul>
+            </div>
+            <div class="">
+                <div class="flex items-center">
+                    <img src="images/logo.png" alt="">
+                    <h3 class="text-white text-4xl font-bold capitalize ml-3">fruits burst</h3>
+                </div>
             </div>
             <div>
-                <input class="py-4 px-7 outline-none rounded-full" type="text" placeholder="Search here">
+                <input class="py-4 px-7 outline-none rounded-full hidden lg:block" type="text" placeholder="Search here">
             </div>
-        </nav>
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
+                </label>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-colorPrimary  w-52">
+                    <li><a class="font-normal text-lg text-white capitalize hover:opacity-80 transition"
+                        href="#">home</a>
+                </li>
+                <li><a class="font-normal text-lg text-white capitalize hover:opacity-80 transition"
+                        href="#">about
+                        us</a></li>
+                <li><a class="font-normal text-lg text-white capitalize hover:opacity-80 transition"
+                        href="#">shop</a>
+                </li>
+                <li><a class="font-normal text-lg text-white capitalize hover:opacity-80 transition"
+                        href="#">all
+                        fruits</a></li>
+                </ul>
+            </div>
+        </div>
 
 
         <!-- ============= banner section ======= -->
         <div class="container carousel">
-            <div id="slide1" class="carousel-item relative w-full pt-20 pb-52"
+            <div id="slide1" class="carousel-item relative w-full pt-5 lg:pt-20 pb-5 lg:pb-52"
                 style="background:linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.00) 100%), url(./images/banner1.png);">
                 <div class="text-center">
-                    <h2 class="text-7xl text-white font-extrabold mb-6">Exotic tastes at your <br> doorstep</h2>
+                    <h2 class="text-3xl lg:text-3xl lg:text-7xl text-white font-extrabold mb-6">Exotic tastes at your <br> doorstep</h2>
                     <p class="font-medium text-lg text-white mb-8">We supply highly quality organic products</p>
                     <button class="btn bg-colorPrimary outline-none border-none text-white hover:text-colorPrimary">Shop
                         Now</button>
@@ -67,10 +102,10 @@
                 </div>
             </div>
             <div id="slide2" class="carousel-item relative w-full">
-                <div id="slide1" class="carousel-item relative w-full pt-20 pb-52"
+                <div id="slide1" class="carousel-item relative w-full pt-5 lg:pt-20 pb-5 lg:pb-52"
                     style="background:linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.00) 100%), url(./images/banner2.png);">
                     <div class="text-center">
-                        <h2 class="text-7xl text-white font-extrabold mb-6">Exotic tastes at your <br> doorstep</h2>
+                        <h2 class="text-3xl lg:text-7xl text-white font-extrabold mb-6">Exotic tastes at your <br> doorstep</h2>
                         <p class="font-medium text-lg text-white mb-8">We supply highly quality organic products</p>
                         <button
                             class="btn bg-colorPrimary outline-none border-none text-white hover:text-colorPrimary">Shop
@@ -88,10 +123,10 @@
                 </div>
             </div>
             <div id="slide3" class="carousel-item relative w-full">
-                <div id="slide1" class="carousel-item relative w-full pt-20 pb-52"
+                <div id="slide1" class="carousel-item relative w-full pt-5 lg:pt-20 pb-5 lg:pb-52"
                     style="background:linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.00) 100%), url(./images/banner3.png);">
                     <div class="text-center">
-                        <h2 class="text-7xl text-white font-extrabold mb-6">Exotic tastes at your <br> doorstep</h2>
+                        <h2 class="text-3xl lg:text-7xl text-white font-extrabold mb-6">Exotic tastes at your <br> doorstep</h2>
                         <p class="font-medium text-lg text-white mb-8">We supply highly quality organic products</p>
                         <button
                             class="btn bg-colorPrimary outline-none border-none text-white hover:text-colorPrimary">Shop
@@ -109,10 +144,10 @@
                 </div>
             </div>
             <div id="slide4" class="carousel-item relative w-full">
-                <div id="slide1" class="carousel-item relative w-full pt-20 pb-52"
+                <div id="slide1" class="carousel-item relative w-full pt-5 lg:pt-20 pb-5 lg:pb-52"
                     style="background:linear-gradient(180deg, #121212 0%, rgba(18, 18, 18, 0.00) 100%), url(./images/banner4.png);">
                     <div class="text-center">
-                        <h2 class="text-7xl text-white font-extrabold mb-6">Exotic tastes at your <br> doorstep</h2>
+                        <h2 class="text-3xl lg:text-7xl text-white font-extrabold mb-6">Exotic tastes at your <br> doorstep</h2>
                         <p class="font-medium text-lg text-white mb-8">We supply highly quality organic products</p>
                         <button
                             class="btn bg-colorPrimary outline-none border-none text-white hover:text-colorPrimary">Shop
@@ -133,7 +168,7 @@
     </header>
 
     <!-- ===== fruits section ======= -->
-    <div class="grid grid-cols-5 max-w-6xl mx-auto shadow-lg relative bottom-20 bg-white p-10 rounded-xl">
+    <div class="grid grid-cols-2 gap-5 lg:gap-0 lg:grid-cols-5 max-w-6xl mx-auto shadow-lg relative bottom-0 lg:bottom-20 bg-white p-10 rounded-xl">
         <div class="flex flex-col justify-center items-center">
             <img src="./images/fruit1.png" alt="fruit img">
             <p class="font-medium text-lg text-black mt-4 text-center">Grape</p>
@@ -157,15 +192,15 @@
     </div>
 
     <!-- =========== deal of the day ========== -->
-    <section class="container mx-auto">
-        <div class="flex justify-between">
+    <section class="container mx-auto mt-8 lg:0">
+        <div class="block lg:flex justify-between">
             <div class="">
-                <h2 class="text-colorHead text-5xl font-extrabold mb-6">Deal of the day</h2>
-                <p class="font-medium text-colorPara leading-6 max-w-xl">Contrary to popular belief, is not simply
+                <h2 class="text-center lg:text-left text-colorHead text-xl lg:text-5xl font-extrabold mb-6">Deal of the day</h2>
+                <p class="text-center lg:text-left font-medium text-colorPara leading-6 max-w-xl">Contrary to popular belief, is not simply
                     random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000
                     years old.</p>
             </div>
-            <div class="flex gap-16">
+            <div class="flex gap-8 lg:gap-16 justify-center mt-5 lg:mt-0">
                 <div class="">
                     <h3 class="text-colorHead text-5xl font-extrabold mb-2 ">29</h3>
                     <p class="font-medium text-colorPara text-center">Days</p>
@@ -186,7 +221,7 @@
         </div>
 
         <!-- ========= deal cards ======== -->
-        <div class="grid grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
             <div class="border border-red-500 flex flex-col justify-center items-center py-12">
                 <div class="flex flex-col justify-center items-center">
                     <img width="106px" src="./images/fruit6.png" alt="">
@@ -210,7 +245,7 @@
                 <div>
                     <!-- The button to open modal -->
                     <a href="#my_modal_8" class="text-colorPrimary">Details</a>
-                
+
                     <div class="modal" id="my_modal_8">
                         <div class="modal-box flex flex-col justify-center items-center">
                             <div>
@@ -220,16 +255,26 @@
                             <p class="py-4">This modal works with anchor links</p>
                             <div class="rating rating-md rating-half mb-8">
                                 <input type="radio" name="rating-10" class="rating-hidden" />
-                                <input type="radio" name="rating-10" class="bg-orange-300 mask mask-star-2 mask-half-1" />
-                                <input type="radio" name="rating-10" class="bg-orange-300 mask mask-star-2 mask-half-2" />
-                                <input type="radio" name="rating-10" class="bg-orange-300 mask mask-star-2 mask-half-1" checked />
-                                <input type="radio" name="rating-10" class="bg-orange-300 mask mask-star-2 mask-half-2" />
-                                <input type="radio" name="rating-10" class="bg-orange-300 mask mask-star-2 mask-half-1" />
-                                <input type="radio" name="rating-10" class="bg-orange-300 mask mask-star-2 mask-half-2" />
-                                <input type="radio" name="rating-10" class="bg-orange-300 mask mask-star-2 mask-half-1" />
-                                <input type="radio" name="rating-10" class="bg-orange-300 mask mask-star-2 mask-half-2" />
-                                <input type="radio" name="rating-10" class="bg-orange-300 mask mask-star-2 mask-half-1" />
-                                <input type="radio" name="rating-10" class="bg-orange-300 mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-10"
+                                    class="bg-orange-300 mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-10"
+                                    class="bg-orange-300 mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-10" class="bg-orange-300 mask mask-star-2 mask-half-1"
+                                    checked />
+                                <input type="radio" name="rating-10"
+                                    class="bg-orange-300 mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-10"
+                                    class="bg-orange-300 mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-10"
+                                    class="bg-orange-300 mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-10"
+                                    class="bg-orange-300 mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-10"
+                                    class="bg-orange-300 mask mask-star-2 mask-half-2" />
+                                <input type="radio" name="rating-10"
+                                    class="bg-orange-300 mask mask-star-2 mask-half-1" />
+                                <input type="radio" name="rating-10"
+                                    class="bg-orange-300 mask mask-star-2 mask-half-2" />
                             </div>
                             <div class="modal-action">
                                 <a href="#" class="btn">Close</a>
@@ -244,7 +289,7 @@
             <button class="btn">Show all</button>
         </div>
     </section>
-    
+
 </body>
 
 </html>

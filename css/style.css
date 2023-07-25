@@ -10,3 +10,8 @@ html{
 .carousel-item {
     display: block;
 }
+/* ========== responsive menu position fixed ======= */
+.dropdown .dropdown-content {
+    position: absolute;
+    right: 0;
+}
