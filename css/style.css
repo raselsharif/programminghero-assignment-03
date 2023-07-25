@@ -1,0 +1,12 @@
+/* ========= google fonts ======= */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* common style  */
+html{
+    font-family: 'Lato', sans-serif;
+}
+
+/* ====== fixed daisyUI banner flex problem === */
+.carousel-item {
+    display: block;
+}
