@@ -15,3 +15,12 @@ html{
     position: absolute;
     right: 0;
 }
+@media screen and (max-width:576px) {
+    /* ======= banner button position fixing ======= */
+    .right-5 {
+        right: 0.25rem !important;
+    }
+    .left-5 {
+        left: 0.25rem !important;
+    }
+}
